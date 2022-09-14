@@ -4,7 +4,10 @@ const check=document.querySelector(".check-btn")
 const input=document.querySelector(".guess-input")
 const again=document.querySelector(".again-btn")
 const secret=document.querySelector(".secret-number")
-
+const score1=document.querySelector(".score")
+const topScore1=document.querySelector(".top-score")
+let score=10;
+let topScore=0;
 
 
 check.addEventListener("click",()=>{
@@ -15,13 +18,17 @@ check.addEventListener("click",()=>{
      if(!input.value){
         msg.innerText="Please enter a number"
      }else if(randomNumber===guessInput){
-       body.className ="bg-success"
+       body.style.backgroundColor="yellow"
        msg.innerHTML="you win 💝"
+       secret.textContent=randomNumber
      }else if(randomNumber<guessInput){
       msg.innerHTML="decrase"
+      
+      
 
      }else{
       msg.innerHTML="incrase"
+    
      }
 
 })
