@@ -19,16 +19,21 @@ check.addEventListener("click",()=>{
         msg.innerText="Please enter a number"
      }else if(randomNumber===guessInput){
        body.style.backgroundColor="yellow"
-       msg.innerHTML="you win 💝"
+         msg.innerHTML = `You win <i class="fa-regular fa-face-sad-tear fa-2x"></i>`;
        secret.textContent=randomNumber
      }else if(randomNumber<guessInput){
-      msg.innerHTML="decrase"
+      
+      msg.innerHTML = `<i class="fa-solid fa-arrow-trend-down fa-2x"></i> DECREASE `
+                                        
+       document.querySelector(".score").textContent = score;
+       score--;
       
       
 
      }else{
-      msg.innerHTML="incrase"
-    
+      msg.innerHTML=`<i class="fa-solid fa-arrow-trend-up fa-2x"></i> INCREASE `
+        document.querySelector(".score").textContent = score;
+        score--;
      }
 
 })
