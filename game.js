@@ -16,6 +16,12 @@ check.addEventListener("click",()=>{
         msg.innerText="Please enter a number"
      }else if(randomNumber===guessInput){
        body.className ="bg-success"
+       msg.innerHTML="you win 💝"
+     }else if(randomNumber<guessInput){
+      msg.innerHTML="decrase"
+
+     }else{
+      msg.innerHTML="incrase"
      }
 
 })
